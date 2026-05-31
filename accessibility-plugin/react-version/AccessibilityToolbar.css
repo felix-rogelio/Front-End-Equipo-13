@@ -1,0 +1,117 @@
+/* Botón flotante de accesibilidad */
+.a11y-toolbar {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2147483647;
+  font-family: sans-serif;
+}
+
+.a11y-toggle {
+  background: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.a11y-toggle:hover {
+  background: #0055aa;
+  transform: translateY(-1px);
+}
+
+.a11y-menu {
+  position: absolute;
+  right: 0;
+  bottom: 60px;
+  width: 240px;
+  background: #222;
+  border-radius: 12px;
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35);
+}
+
+.a11y-menu button {
+  width: 100%;
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.a11y-menu button:hover {
+  background: #444;
+}
+
+.a11y-menu button.active {
+  background: #0066cc;
+  border: 1px solid #0099ff;
+}
+
+.a11y-menu button:focus {
+  outline: 2px solid #0099ff;
+  outline-offset: 2px;
+}
+
+/* Alto contraste */
+.a11y-high-contrast * {
+  background: #000 !important;
+  color: #ffff00 !important;
+  border-color: #fff !important;
+  box-shadow: none !important;
+}
+
+/* Fuente legible (Dyslexia) */
+.a11y-dyslexic,
+.a11y-dyslexic * {
+  font-family: "OpenDyslexic", "Comic Sans MS", "Arial", sans-serif !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Movimiento reducido */
+.a11y-reduced-motion * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Resaltar foco */
+.a11y-focus-outline *:focus {
+  outline: 3px dashed #ff0 !important;
+  outline-offset: 2px !important;
+}
+
+/* Lectura en voz alta */
+.voice-reading-active {
+  background: rgba(0, 102, 204, 0.1) !important;
+  border: 2px solid #0066cc !important;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+@media (max-width: 480px) {
+  .a11y-toolbar {
+    right: 8px;
+    bottom: 8px;
+  }
+
+  .a11y-menu {
+    width: 220px;
+    bottom: 56px;
+  }
+
+  .a11y-menu button {
+    padding: 9px 10px;
+    font-size: 13px;
+  }
+}
