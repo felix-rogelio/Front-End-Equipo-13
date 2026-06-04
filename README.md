@@ -183,3 +183,4 @@ Este proyecto es de uso educativo. Puedes modificarlo y adaptarlo según tus nec
 
 **¡Espero que disfrutes este campus virtual! Siéntete libre de personalizarlo y extender sus funcionalidades.**
 # prueba-proyecto
+# prueba-moodle
